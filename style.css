@@ -1,0 +1,25 @@
+header{
+    background-color:red;
+}
+
+.main {
+    width:3;
+    background-color: aqua;
+}
+
+img{
+    width:300px;
+    display: inline-block;
+}
+
+.ok{
+width: 300px;
+height: 200px;
+
+}
+
+.rr,
+.ss{
+    display: inline-block;
+    
+}
