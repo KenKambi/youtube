@@ -1,21 +1,15 @@
 header{
-    background-color:red;
-    vertical-align: top;
-    margin-top: 0;
+  
 }
 
-.main {
-    width:;
-    background-color: aqua;
-    padding-bottom: 300px;
-}
+
 
 .top{
     display: flex;
-    position: fixed;
-    z-index: 200;
-    background-color:red;
-    width: ;
+    z-index: ;
+    background-color:;
+    height:55px;
+    border: 1px solid grey;
     justify-content: space-between;
 
 }
@@ -27,21 +21,66 @@ header{
     
 }
 
+.left-side{
+    display:flex;
+    justify-content: space-around;
+    width:200px;
+
+    background-color: lightpink;
+}
+.right-side{
+    background-color: lightblue;
+    width: 250px;
+    display:flex;
+    justify-content: space-around;
+}
+.middle-side{
+    width:400px;
+    margin-left: 30px;
+    
+    
+}
+
+
+
 .hamburger{
-    width:50px;
+    width:30px;
+    margin-left: 10px;
+
 }
 
 .youtube-icon{
-    width:30px;
+    width:95px;
 }
 .search-box{
-    width:30px;
+    height: 36px;
+    flex:1;
+    padding-left: 10px;
+    font-size: 18px;
+    border: 1px solid grey;
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
+
 }
+.search-box::placeholder{
+    
+    
+}
+
 .search-icon{
-    width:30px;
+    margin-top:5px;
+    width:40px;
+    height: 36px;
+    margin-left: -10px;
+    background-color:grey;
+    margin-right: 10px;
 }
 .voice-icon{
+    margin-top:5px;
     width:30px;
+    height:30px;
+    border-radius:15px;
+    background-color:rgb(121, 97, 97);
 }
 .upload-icon{
     width:30px;
@@ -58,22 +97,37 @@ header{
 
 
 
-img{
-    width:300px;
-    display: inline-block;
+
+
+
+
+
+.main {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap:16px;
+    row-gap:40px;
+    background-color: aqua;
+    padding-bottom: 300px;
 }
 
-.column1,
-.column2{
-display:inline-block;
+
+
+img{
+    width:100%;
+}
+
+.column{
 vertical-align:top;
 }
 
-.description,
-.profile{
-    display: inline-block;
-    
+.info{
+    display: grid;
+    grid-template-columns: 46px 1fr;
 }
+
+
+    
 .profile{
     vertical-align:top;
 }
@@ -84,16 +138,21 @@ vertical-align:top;
 .profile-pic{
     width:36px;
     border-radius:50%;
-    margin-right: 10px;
 }
 .description .video-info{
     margin-top:0;
     font-weight:700;
+    line-height: 20px;
 }
 
 .video-owner{
     margin-bottom: 4px;
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+
 }
 .engagements{
     margin-top: 0px;
+    font-size: 15px;
+    color: rgb(96, 96, 96);
 }
