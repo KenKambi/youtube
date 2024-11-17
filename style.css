@@ -1,11 +1,62 @@
 header{
     background-color:red;
+    vertical-align: top;
+    margin-top: 0;
 }
 
 .main {
     width:;
     background-color: aqua;
+    padding-bottom: 300px;
 }
+
+.top{
+    display: flex;
+    position: fixed;
+    z-index: 200;
+    background-color:red;
+    width: ;
+    justify-content: space-between;
+
+}
+.left-side, 
+.right-side,
+.middle-side { 
+    display:flex;
+    align-items: center;
+    
+}
+
+.hamburger{
+    width:50px;
+}
+
+.youtube-icon{
+    width:30px;
+}
+.search-box{
+    width:30px;
+}
+.search-icon{
+    width:30px;
+}
+.voice-icon{
+    width:30px;
+}
+.upload-icon{
+    width:30px;
+}
+.youtube-apps{
+    width:30px;
+}
+.notification-icon{
+    width:30px;
+}
+.channel-profile{
+    width:30px;
+}
+
+
 
 img{
     width:300px;
