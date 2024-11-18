@@ -6,10 +6,14 @@ header{
 
 .top{
     display: flex;
-    z-index: ;
-    background-color:;
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    z-index: 100;
+    background-color:white;
     height:55px;
-    border: 1px solid grey;
+    border-bottom: 1px solid rgb(226, 226, 226);
     justify-content: space-between;
     
 
@@ -47,20 +51,24 @@ header{
 .hamburger{
     width:30px;
     margin-left: 10px;
+    cursor:pointer;
 
 }
 
 .youtube-icon{
     width:95px;
+    cursor:pointer;
+
 }
 .search-box{
     height: 36px;
     flex:1;
     padding-left: 10px;
     font-size: 18px;
-    border: 1px solid grey;
+    border: 1px solid rgb(204, 204, 204);
     border-radius: 2px;
     box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
+    
 
 }
 .search-box::placeholder{
@@ -69,38 +77,161 @@ header{
 }
 
 .search-icon{
+    position: relative;
     margin-top:5px;
     width:40px;
     height: 36px;
     margin-left: -10px;
-    background-color:grey;
+    background-color:rgb(247, 247, 247);
     margin-right: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    cursor:pointer;
+   
+
 }
+
+.search .tooltip{
+    position: absolute;
+    background-color: grey;
+    color:white;
+    border-radius:2px;
+    padding:4px;
+    opacity:0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    
+}
+
+.search:hover .tooltip{
+    opacity:1;
+}
+
 .voice-icon{
+    position: relative;
     margin-top:5px;
     width:30px;
     height:30px;
     border-radius:15px;
-    background-color:rgb(121, 97, 97);
+    cursor:pointer;
+    background-color:rgb(248, 248, 248);
 }
-.upload-icon{
-    width:30px;
+
+.voice .tooltip{
+    position: absolute;
+    background-color: grey;
+    color:white;
+    border-radius:2px;
+    padding:4px;
+    opacity:0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    
 }
-.youtube-apps{
-    width:30px;
+.voice:hover .tooltip{
+    opacity:1;
+
 }
-.notification-icon{
-    width:30px;
+
+.create .tooltip{
+    position: absolute;
+    background-color: grey;
+    color:white;
+    border-radius:2px;
+    padding:4px;
+    opacity:0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    
 }
+
+.create:hover .tooltip{
+    opacity:1;
+}
+
+.youtube-apps .tooltip{
+    position: absolute;
+    background-color: grey;
+    color:white;
+    border-radius:2px;
+    padding:4px;
+    opacity:0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    
+}
+
+.youtube-apps:hover .tooltip{
+    opacity:1;
+}
+
+.upload-icon,
+.youtube-apps,
+.notification-icon,
 .channel-profile{
     width:30px;
+    cursor:pointer;
 }
+
+
+.notification,
+.voice
+.search
+.create
+.youtube-apps {
+    position: relative;
+    
+   
+}
+
+.notification-number{
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: red;
+    color:white;
+    align-content: center;
+    font-size:10px;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    
+}
+
+.notification .tooltip{
+    position: absolute;
+    background-color: grey;
+    color:white;
+    border-radius:2px;
+    padding:4px;
+    opacity:0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    
+}
+
+.notification:hover .tooltip{
+    opacity:1;
+
+}
+
+.channel-profile{
+    border-radius:50%;
+}
+
 
 
 
 .sidebar{
     width:72px;
     position:fixed;
+    left:0;
+    top:55px;
+    bottom:0;
+    border: 1px solid grey;
+    z-index: 300;
     
 }
 
@@ -122,7 +253,7 @@ header{
 
 .side img{
     height:30px;
-   margin-top: 5px;
+    margin-top: 5px;
 }
 
 .side p{
@@ -138,13 +269,38 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     column-gap:16px;
     row-gap:40px;
-    background-color: aqu;
+    
     padding-bottom: 300px;
-    margin-top:60px;
-    margin-left: 80px;
+   
+}
+
+@media (max-width: 100px){
+    .main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+    
+@media (min-width: 1000px){
+    .main{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 
+.pic{
+    position:relative;
+
+}
+
+.time{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    background-color: black;
+    color:white;
+    border-radius:2px;
+    font-size:15px;
+}
 
 img{
     width:100%;
